@@ -3,7 +3,7 @@ py_binary(
     srcs = ["main.py"],
     main = "main.py",
     deps = [
-        "//lib:math_utils",
+        "//lib:math_lib",
         "@my_python_deps//requests",
         
     ],
