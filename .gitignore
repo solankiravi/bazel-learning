@@ -1,6 +1,5 @@
 # Bazel
 bazel-*
-*.bazelrc
 bazel-bin
 bazel-genfiles
 bazel-out

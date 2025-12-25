@@ -1,0 +1,19 @@
+# =========================
+# General output hygiene
+# =========================
+build --color=yes
+test --color=yes
+
+test --test_tag_filters=unit
+test --test_size_filters=small
+test --test_timeout=6
+test --test_output=all
+
+test:ci --test_tag_filters=integration
+test:ci --test_timeout=10
+
+
+build --bes_results_url=http://localhost:8080/invocation/
+build --bes_backend=grpc://localhost:1985
+build --remote_cache=grpc://localhost:1985
+build --remote_timeout=10m
