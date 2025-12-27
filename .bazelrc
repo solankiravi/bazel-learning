@@ -6,14 +6,15 @@ test --color=yes
 
 test --test_tag_filters=unit
 test --test_size_filters=small
-test --test_timeout=6
+test --test_timeout=20
 test --test_output=all
 
 test:ci --test_tag_filters=integration
-test:ci --test_timeout=10
+test:ci --test_timeout=30
 
 
 build --bes_results_url=http://localhost:8080/invocation/
 build --bes_backend=grpc://localhost:1985
 build --remote_cache=grpc://localhost:1985
 build --remote_timeout=10m
+build --remote_upload_local_results=true

@@ -3,8 +3,19 @@ py_binary(
     srcs = ["main.py"],
     main = "main.py",
     deps = [
-        "//lib:math_lib",
-        "@my_python_deps//requests",
-        
+        "//lib:math_lib",        
+    ],
+)
+
+py_binary(
+    name = "read_file",
+    srcs = ["read_file.py"],
+    
+    data = [
+        "//config:app_config",
+    ],
+    deps = [
+        "//lib:file_lib",
+        "@rules_python//python/runfiles",
     ],
 )

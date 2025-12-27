@@ -21,3 +21,28 @@ py_test(
         "@my_python_deps//pytest"
     ]
 )
+
+py_test(
+    name = "test_http",
+    srcs = ["test_http.py"],
+    size = "small",
+    timeout = "short",
+    tags = ["unit"],
+    deps = [
+        "//lib:http_lib",
+        "@my_python_deps//pytest"
+    ]
+)
+
+py_test(
+    name = "test_files",
+    srcs = ["test_files.py"],
+    size = "small",
+    timeout = "short",
+    tags = ["unit"],
+    deps = [
+        "//lib:file_lib",
+        "@my_python_deps//pytest",
+        "@rules_python//python/runfiles",
+    ]
+)

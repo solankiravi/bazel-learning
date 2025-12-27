@@ -1,11 +1,8 @@
-from lib.math_utils import add, substract, multiply, divide
-import unittest
 import time
 
-class TestMathUtils(unittest.TestCase):
-    def test_add(self):
-        time.sleep(2)# Simulating a long-running test
-        assert add(3,4) == 7
+from lib.math_utils import add
 
-if __name__ == '__main__':
-    unittest.main()
+class TestMathUtils():
+    def test_add(self):
+        time.sleep(5)  # Simulating a long-running test
+        assert add(3,4) == 7

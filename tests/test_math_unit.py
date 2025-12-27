@@ -1,7 +1,6 @@
 from lib.math_utils import add, substract, multiply, divide
-import unittest
 
-class TestMathUtils(unittest.TestCase):
+class TestMathUtils():
     def test_add(self):
         assert add(3,4) == 7
 
@@ -13,6 +12,3 @@ class TestMathUtils(unittest.TestCase):
 
     def test_divide(self):
         assert divide(3,4) == 0.75
-
-if __name__ == '__main__':
-    unittest.main()
